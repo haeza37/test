@@ -3,6 +3,12 @@
     </head>
     <body>
         <h1>Thanks for visiting!<h1>
-        <h2>Nothing exist here!<h2>
+        {% for post in posts %}
+           <div style="font-size:18px; color:#333; line-height:1.5">
+                <p>published: {{ post.published_date }}</p>
+                <h1><a href="">{{post.title}}</a></h1>
+                <p>{{post.text|linebreaksbr}}</p>
+            </div>
+        {% endfor %}
     </body>
 </html>
